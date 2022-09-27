@@ -61,3 +61,9 @@ println str3 // выведет SELECT * FROM table  WHERE name_prefix = prefix->
 
 ### Регулярные выражения
 <p><a href="/src/main/groovy/ru/atom/groovy/RegexRunner.groovy">Пример работы с регулярными выражениями</a></p>
+
+## Closure
+<p>Closure очень сильно похожи на stream-lambda-expressions в Java.</p>
+<p>В Closure можно менять значения локальных аргументов внутри функциональных интерфейсов, т.к. сохраняется References
+на них.</p>
+<p><a href="/src/main/groovy/ru/atom/groovy/ClosureRunner.groovy">Пример c Closure</a></p>
