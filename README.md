@@ -122,6 +122,7 @@ list.size().downto(0) {
 <p>В Closure можно менять значения локальных аргументов внутри функциональных интерфейсов, т.к. сохраняется References
 на них.</p>
 <p><a href="/src/main/groovy/ru/atom/groovy/ClosureRunner.groovy">Пример c Closure</a></p>
+<p><a href="/src/main/groovy/ru/atom/groovy/Closure2Runner.groovy">Пример2 c Closure</a></p>
 
 ## ООП в Groovy
 <p>По умолчанию для всех полей класса создаются геттеры и сеттеры. </p>
