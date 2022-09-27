@@ -122,3 +122,40 @@ list.size().downto(0) {
 <p>В Closure можно менять значения локальных аргументов внутри функциональных интерфейсов, т.к. сохраняется References
 на них.</p>
 <p><a href="/src/main/groovy/ru/atom/groovy/ClosureRunner.groovy">Пример c Closure</a></p>
+
+## ООП в Groovy
+<p>По умолчанию для всех полей класса создаются геттеры и сеттеры. </p>
+<p>Можно даже так вызвать конструктор у класса :D<code>Student student = ["Ivan", "Ivanov", 25]</code> - это пиздец.</p>
+<p><a href="/src/main/groovy/ru/atom/groovy/Student.groovy">Пример класса</a>.</p>
+
+### Trait
+<p>Очень похожи на интерфейсы в Java, но могут содержать свои поля.</p>
+
+### Mixin
+<p>Тоже самое, что и <code>Trait</code>, только задается аннотацией <code>@Mixin(Clazz.class)</code> над классом, 
+а не implements... Также может работать как Extension, например:</p>
+<pre>
+class EmailValidation {
+    static boolean isEmail(String str) {
+        //some logic
+        true
+    }
+}
+
+String.mixin(EmailValidation.class)
+def email = "lol@mail.ru"
+println email.isEmail() // выведет true
+</pre>
+
+### AST (Abstract Syntax Tree)
+
+<p>Lombok, но токо в Groovy.</p>
+<img src="/src/main/resources/images/ast.png" style="width:1000px; height: 750px;" title="" alt=""/>
+
+### Meta Class MOP(Meta Object Protocol)
+<p>Грувивоская прокся местного разлива с помощью который груви делает всю свою магию.</p>
+
+### Categories
+<p>Тоже своего рода Extension, но только на определенный объект(не на все объекты данного типа). Вызов дополнительных 
+методов происходит через команду <code>use(Category.class){method.invoke()}</code>. 
+<a href="/src/main/groovy/ru/atom/groovy/CategoryRunner.groovy">Пример</a>.</p>
