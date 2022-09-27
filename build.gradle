@@ -1,0 +1,32 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.9'
+    implementation 'com.sun.xml.bind:jaxb-extra-osgi:2.3.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+wrapper {
+    gradleVersion '7.3'
+}
