@@ -62,6 +62,44 @@ println str3 // выведет SELECT * FROM table  WHERE name_prefix = prefix->
 ### Регулярные выражения
 <p><a href="/src/main/groovy/ru/atom/groovy/RegexRunner.groovy">Пример работы с регулярными выражениями</a></p>
 
+## Операторы языка
+### If-Else
+<p>Условия входа в if statement для разных типов:</p>
+<pre>
+* boolean          is true
+* Collection/Map   is not empty
+* Matcher          has match
+* String/GString   is not empty
+* Number/Char      != 0
+* Reference        != null
+</pre>
+<p>Получается это за счет того, что переопределяется метод <code>asBoolean()</code>, который вызывается при проверки
+условия. <a href="/src/main/java/ru/atom/groovy/Person.java">Пример</a>.</p>
+<p>Также Groovy поддерживает null-safe операторы <code>person?.getId()</code></p>
+
+### Switch
+<p>В switch-оператор в Groovy мы можем передать любой тип объекта. </p>
+<p>Получается это за счет того, что переопределяется метод <code>isCase()</code>, который вызывается при проверки
+условия. <a href="/src/main/java/ru/atom/groovy/Person.java">Пример</a>.</p>
+
+### Loops
+<p>Groovy поддерживает питоновский for-loop <code>for (i in 0..list.size())</code>.</p>
+<p>Groovy поддерживает питоновский for-each-loop<code>for (value in list)</code></p>
+<pre>
+0.upto(list.size()) {
+    println it
+}
+
+list.size().downto(0) {
+    println it
+}
+
+//до 5 с шагом 2
+0.step(5, 2) {
+    println it
+}
+</pre>
+
 ## Closure
 <p>Closure очень сильно похожи на stream-lambda-expressions в Java.</p>
 <p>В Closure можно менять значения локальных аргументов внутри функциональных интерфейсов, т.к. сохраняется References
