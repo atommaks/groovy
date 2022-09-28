@@ -160,3 +160,21 @@ println email.isEmail() // выведет true
 <p>Тоже своего рода Extension, но только на определенный объект(не на все объекты данного типа). Вызов дополнительных 
 методов происходит через команду <code>use(Category.class){method.invoke()}</code>. 
 <a href="/src/main/groovy/ru/atom/groovy/CategoryRunner.groovy">Пример</a>.</p>
+
+## Задачи
+<p>1. <a href="/src/main/groovy/ru/atom/groovy/practice/problem1/Problem1Runner.groovy">Добавить метод инициализации
+"make" для создания объектов любых классов. Метод должен проксировать вызов на соответсвующий конструктор.</a></p>
+<p>2. <a href="/src/main/groovy/ru/atom/groovy/practice/problem2/Problem2Runner.groovy">Добавить возможность складывать
+различные единицы измерения. Например, 3см + 1мм - 25мм = 1005мм</a></p>
+<p>3. <a href="/src/main/groovy/ru/atom/groovy/practice/problem3/Problem3Runner.groovy">Реализовать механизм
+тестирования через BDD:</a></p>
+<pre>
+given {
+    a = 2
+    b = 4
+} when {
+    result = a + b
+} then {
+    result == 6
+}
+</pre>
