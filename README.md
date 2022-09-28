@@ -161,6 +161,9 @@ println email.isEmail() // выведет true
 методов происходит через команду <code>use(Category.class){method.invoke()}</code>. 
 <a href="/src/main/groovy/ru/atom/groovy/CategoryRunner.groovy">Пример</a>.</p>
 
+## DSL. Domain Specific Language
+<a href="/src/main/groovy/ru/atom/groovy/dsl/DslRunner.groovy">Пример</a>
+
 ## Задачи
 <p>1. <a href="/src/main/groovy/ru/atom/groovy/practice/problem1/Problem1Runner.groovy">Добавить метод инициализации
 "make" для создания объектов любых классов. Метод должен проксировать вызов на соответсвующий конструктор.</a></p>
